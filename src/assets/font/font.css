@@ -1,0 +1,25 @@
+@font-face {
+	font-family:'OswaldLight';
+	src: url('Oswald-Light-TTF.ttf');
+}
+/*
+children
+
+<svg class="icon" aria-hidden="true">
+	<use xlink:href="#fax-home-wrench-o"></use>
+</svg>
+*/
+.icon {
+	width: 1em; 
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
+
+/*
+
+s = (s = document.getElementsByTagName("script"))[s.length-1].getAttribute("data-injectcss");if(s&&!a.__iconfont__svg__cssinject__){a.__iconfont__svg__cssinject__=!0;try{document.write("<style>.svgfont {display: inline-block;width: 1em;height: 1em;fill: currentColor;vertical-align: -0.1em;font-size:16px;}</style>");}catch(a){console&&console.log(a);}}function z(){o||(o=!0,h());}c = function(){var a,c,l,h;(h = document.createElement("div")).innerHTML = m,m = null,(l = h.getElementsByTagName("svg")[0])&&(l.setAttribute("aria-hidden","true"),l.style.position = "absolute",l.style.width = 0,l.style.height = 0,l.style.overflow = "hidden",a = l,(c=document.body).firstChild?(h = a,(l = c.firstChild).parentNode.insertBefore(h,l)):c.appendChild(a));},document.addEventListener?~["complete","loaded","interactive"].indexOf(document.readyState)?setTimeout(c,0):(l = function(){document.removeEventListener("DOMContentLoaded",l,!1),c();},document.addEventListener("DOMContentLoaded",l,!1)):document.attachEvent&&(h = c,t = a.document,o = !1,(v = function(){try{t.documentElement.doScroll("left");}catch(a){return void setTimeout(v,50);}z();})(),t.onreadystatechange = function(){"complete" == t.readyState&&(t.onreadystatechange = null,z());});}(window);
+
+*/

@@ -1,0 +1,286 @@
+<template>
+  <div class="SubWebPage">
+    <simple-page-list :setting="setting"></simple-page-list>
+  </div>
+</template>
+
+<script>
+import Vue from "vue";
+import SimplePageList from "@/components/SimplePageList.vue";
+export default Vue.extend({
+  components: { SimplePageList },
+  methods: {},
+  data() {
+    return {
+      setting: {
+        title: "奖励记录",
+        action: "/api/student-reward-record",
+        searchFormItem: [
+          {
+            type: "select",
+            prop: "SemesterId",
+            label: "学期",
+            action: "/api/semester/dropdown-box",
+            options: [],
+            immediate: true,
+            loading: false,
+            span: 8,
+          },
+          {
+            type: "select",
+            prop: "SchoolClassId",
+            label: "班级",
+            action: "/api/school-class/dropdown-box",
+            options: [],
+            immediate: true,
+            loading: false,
+            span: 8,
+          },
+          {
+            type: "select",
+            prop: "Type",
+            label: "获奖类型",
+            action: "/api/student-reward-record/type-dropdown-box",
+            options: [],
+            loading: false,
+            span: 8,
+          },
+          {
+            type: "select",
+            prop: "Level",
+            label: "获奖级别",
+            action: "/api/student-reward-record/level-dropdown-box",
+            options: [],
+            loading: false,
+            span: 8,
+          },
+        ],
+        titleBtns: [
+          {
+            type: "drawer",
+            theme: "primary",
+            icon: "el-icon-plus",
+            label: "添加",
+            drawer: "form",
+            power: "StudentThing_RewardsRecord_Post",
+          },
+        ],
+        rowBtns: [
+          {
+            type: "drawer",
+            theme: "default",
+            icon: "el-icon-info",
+            label: "查看",
+            drawer: "detail",
+            power: "StudentThing_RewardsRecord_Get",
+          },
+          {
+            type: "drawer",
+            theme: "warning",
+            icon: "el-icon-edit",
+            label: "编辑",
+            drawer: "form",
+            power: "StudentThing_RewardsRecord_Put",
+          },
+        ],
+        batchBtns: [
+          {
+            type: "api",
+            theme: "danger",
+            icon: "el-icon-delete",
+            label: "删除",
+            method: "delete",
+            action: "/api/student-reward-record",
+            power: "StudentThing_RewardsRecord_Delete",
+          },
+        ],
+        columns: [
+          { prop: "Name", label: "获奖名称" },
+          { prop: "Type", label: "获奖类型", width:"200px" },
+          { prop: "Level", label: "获奖级别", width:"120px" },
+          { prop: "StudentName", label: "姓名", width:"70px" },
+          {
+            prop: "CreatedTime",
+            label: "获奖日期",
+            pipe: "date",
+            pipeArgs: ["YYYY/MM/DD"],
+            width: "100px",
+          },
+        ],
+        check: true,
+        index: true,
+        drawers: [
+          {
+            name: "detail",
+            type: "detail",
+            action: "/api/student-reward-record",
+            show: false,
+            id: undefined,
+            size: "80%",
+            items: [
+              {
+                prop: "SemesterName",
+                label: "学期",
+                type: "text",
+                span: 12,
+              },
+              {
+                prop: "StudentSchoolClassName",
+                label: "班级",
+                type: "text",
+                span: 12,
+              },
+              {
+                prop: "StudentName",
+                label: "学生",
+                type: "text",
+                span: 12,
+              },
+              {
+                prop: "Type",
+                label: "获奖类型",
+                type: "text",
+                span: 12,
+              },
+              {
+                prop: "Level",
+                label: "获奖级别",
+                type: "text",
+                span: 12,
+              },
+              {
+                prop: "Name",
+                label: "获奖名称",
+                type: "text",
+                span: 12,
+              },
+              {
+                prop: "CreatedTime",
+                label: "获奖时间",
+                type: "text",
+                pipe: "date",
+                pipeArgs: ["YYYY/MM/DD hh:mm"],
+                span: 12,
+              },
+              {
+                prop: "Remark",
+                label: "备注",
+                type: "editor",
+                span: 12,
+              },
+              {
+                prop: "StudentRewardRecordFileStorages",
+                label: "获奖奖状",
+                type: "files",
+                span: 24,
+              },
+            ],
+          },
+          {
+            name: "form",
+            type: "form",
+            action: "/api/student-reward-record",
+            show: false,
+            id: undefined,
+            size: "80%",
+            items: [
+              {
+                prop: "SemesterId",
+                label: "学期",
+                type: "select",
+                required: true,
+                span: 24,
+                action: "/api/semester/dropdown-box",
+                options: [],
+                immediate: true,
+                loading: false,
+              },
+              {
+                prop: "StudentSchoolClassId",
+                label: "班级",
+                type: "select",
+                required: true,
+                span: 12,
+                action: "/api/school-class/dropdown-box",
+                options: [],
+                immediate: true,
+                loading: false,
+                refresh: ["StudentId"],
+              },
+              {
+                prop: "StudentId",
+                label: "学生",
+                type: "select",
+                required: true,
+                span: 12,
+                action: "/api/student/dropdown-box",
+                params: { $classId: "StudentSchoolClassId" },
+                options: [],
+                loading: false,
+              },
+              {
+                prop: "Type",
+                label: "获奖类型",
+                type: "select",
+                required: true,
+                span: 12,
+                action: "/api/student-reward-record/type-dropdown-box",
+                options: [],
+                loading: false,
+                allowcreate: true,
+              },
+              {
+                prop: "Level",
+                label: "获奖级别",
+                type: "select",
+                required: true,
+                span: 12,
+                action: "/api/student-reward-record/level-dropdown-box",
+                options: [],
+                loading: false,
+                allowcreate: true,
+              },
+              {
+                prop: "Name",
+                label: "获奖名称",
+                type: "select",
+                required: true,
+                span: 12,
+                action: "/api/student-reward-record/name-dropdown-box",
+                options: [],
+                loading: false,
+                allowcreate: true,
+              },
+              {
+                prop: "CreatedTime",
+                label: "获奖时间",
+                type: "date",
+                required: true,
+                span: 12,
+              },
+              {
+                prop: "Remark",
+                label: "备注",
+                type: "editor",
+                max: 10240,
+                span: 24,
+              },
+              {
+                prop: "StudentRewardRecordFileStorages_FileStorageId",
+                nesting: true,
+                label: "获奖奖状",
+                type: "files",
+                action: "/api/file-storage/upload/StudentRewardRecord",
+                span: 24,
+              },
+            ],
+          },
+        ],
+      },
+    };
+  },
+});
+</script>
+
+<style lang="sass" scoped>
+</style>

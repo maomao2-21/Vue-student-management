@@ -1,0 +1,384 @@
+body {
+	background-color: #F4F6F9 !important;
+
+}
+
+:focus {
+	outline: 0;
+}
+
+.tmpl_IndexPage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 48rem;
+	/*768px*/
+	min-width: 80rem;
+	/*1280px*/
+}
+
+/*子页面外框*/
+.SubWebPage {
+	position: relative;
+	padding-bottom: 30px;
+	padding-top: 7.8125rem;
+	/*125px*/
+	padding-left: 16.875rem;
+	/*270px*/
+	padding-right: 2.5rem;
+	/*40px*/
+}
+
+/*子页面 标题*/
+.SubWebPage .divWebTitle {
+	font-size: 1.75rem;
+	/*28px*/
+	color: #4C4C51;
+	padding-bottom: 0.9375rem;
+	/*15px*/
+}
+
+/*白底面板*/
+.SubWebPage .divBgBox {
+	background-color: #FFFFFF;
+	padding: 0.9375rem;
+	/*15px*/
+}
+
+.titleCont {
+	position: relative;
+	padding-left: 20px;
+	color: #323E56;
+	letter-spacing: 2px;
+}
+
+.titleCont .spIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 20px;
+	border-radius: 5px;
+	background-image: linear-gradient(#4545FF, #2D8EFF);
+}
+
+.colInfo {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.colInfo .colFonts {
+	font-size: 16px;
+	color: #B0A8BB;
+}
+
+.colRemarksCont {
+	font-size: 16px;
+	color: #B0A8BB;
+}
+
+.divToolsTitle {
+	height: 40px;
+	line-height: 40px;
+}
+
+.el-icon-circle-close {
+	color: #FFFFFF;
+}
+
+.btn-mini {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+/**********************************************
+ width 
+ **********************************************/
+.width_2Copies {
+	width: 49.9%;
+}
+
+.width_3Copies {
+	width: 33.3%;
+}
+
+.width_4Copies {
+	width: 24.9%;
+}
+
+.width_5Copies {
+	width: 19.9%;
+}
+
+.width_100Pie {
+	width: 100% !important;
+}
+
+.width_15 {
+	width: 0.9375rem !important;
+	/*15px*/
+}
+
+.width_25 {
+	width: 1.5625rem !important;
+	/*25px*/
+}
+
+.width_30 {
+	width: 1.875rem !important;
+	/*30px*/
+}
+
+.width_35 {
+	width: 2.1875rem !important;
+	/*35px*/
+}
+
+.width_40 {
+	width: 2.5rem !important;
+	/*40px*/
+}
+
+.width_60 {
+	width: 3.75rem !important;
+	/*60px*/
+}
+
+.width_50 {
+	width: 3.125rem !important;
+	/*50px*/
+}
+
+.width_70 {
+	width: 4.375rem !important;
+	/*70px*/
+}
+
+.width_80 {
+	width: 5rem !important;
+	/*80px*/
+}
+
+.width_300 {
+	width: 18.75rem !important;
+	/*300px*/
+}
+
+/**********************************************
+ height 
+ **********************************************/
+.height_15 {
+	height: 0.9375rem !important;
+	/*15px*/
+}
+
+.height_25 {
+	height: 1.5625rem !important;
+	/*25px*/
+}
+
+.height_30 {
+	height: 1.875rem !important;
+	/*30px*/
+}
+
+.height_35 {
+	height: 2.1875rem !important;
+	/*35px*/
+}
+
+.height_40 {
+	height: 2.5rem !important;
+	/*40px*/
+}
+
+.height_60 {
+	height: 3.75rem !important;
+	/*60px*/
+}
+
+.height_50 {
+	height: 3.125rem !important;
+	/*50px*/
+}
+
+.height_70 {
+	height: 4.375rem !important;
+	/*70px*/
+}
+
+.height_80 {
+	height: 5rem !important;
+	/*80px*/
+}
+
+
+/*重写框架样式*/
+.form-control {
+	font-size: 0.875rem;
+	/*14px*/
+	/*
+	 height: calc(1.875rem + 2px);
+	 line-height: calc(1.875rem + 2px);*/
+}
+
+.formControlSel {
+	width: 100% !important;
+	display: block;
+}
+
+.form-group label {
+	font-size: 0.875rem;
+	/*14px*/
+}
+
+
+/*
+	重置/返回 btn-default
+	查询/提交 btn-primary
+	查看 btn-success
+	删除 btn-danger
+	编辑 btn-warning
+	导出/导入 btn-info
+*/
+.btn {
+	letter-spacing: 0.0625rem;
+	/*1px*/
+}
+
+.btn-mini span,
+.btn-mini {
+	font-size: 12px;
+}
+
+.btnFooter {
+	margin-right: 10px;
+}
+
+.btnDel span {
+	font-size: 12px;
+}
+
+.el-btn {
+	padding: 2px 5px;
+	line-height: 18px;
+}
+
+.el-btn span {
+	font-size: 12px;
+}
+
+/**/
+.formGroupCont {
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+.formGroupCont .formControl {
+	width: 100%;
+}
+
+/**/
+.search-cont .btn-mini {
+	margin-left: 15px;
+	margin-right: 5px;
+	height: 40px;
+	line-height: 27px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 14px;
+}
+
+
+
+/*Table 自定义*/
+.tableTwo {
+	width: 100%;
+}
+
+.tableTwo tr th {
+	padding: 15px;
+	letter-spacing: 1px;
+}
+
+.tableTwo tr td {
+	border-top: 1px solid #eee;
+	font-size: 14px;
+	padding: 15px;
+	color: #767676;
+}
+
+
+
+/* 无数据提示*/
+.NoDataTipCont {
+	color: #B1B1B1;
+	letter-spacing: 1px;
+}
+
+.NoDataTipCont .faxIcon {
+	margin-right: 5px;
+	font-size: 18px;
+}
+
+
+/*详情内容专用*/
+.DetailsFonts {
+	color: #767676;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+.DetailsFonts .divSubTitle {
+	background-color: #307BFF;
+	color: #FFFFFF;
+	width: 80px;
+	padding: 3px 0px;
+	text-align: center;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+.DetailsFonts .spFontTitle {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.min-h-170 {
+	min-height: 170px;
+}
+
+/*重置 element 控件样式 结合*/
+
+
+/*优，良，及格，不及格 颜色*/
+.lblExcellent,
+.lblGood,
+.lblPass,
+.lblFailed {
+	padding: 3px 8px;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.lblExcellent {
+	background-color: #30A846;
+	color: #FFFFFF;
+}
+
+.lblGood {
+	background-color: #FAC10B;
+	color: #000000;
+}
+
+.lblPass {
+	background-color: #6c757d;
+	color: #FFFFFF;
+}
+
+.lblFailed {
+	background-color: #DC3545;
+	color: #FFFFFF;
+}
